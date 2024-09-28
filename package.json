@@ -8,10 +8,13 @@
   "name": "problyzer",
   "version": "0.0.1-beta",
   "description": "Probability analyzer designed to make predictions.",
-  "main": ".eslintrc.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "test": "npm run build && node dist/index.js",
+    "test-dev": "npx tsc",
+    "lint": "eslint .",
+    "compile": "tsc",
+    "build": "npm run lint && npm run compile"
   },
   "repository": {
     "type": "git",

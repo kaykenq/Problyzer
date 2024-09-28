@@ -13,10 +13,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noImplicitOverride": true,
     "exactOptionalPropertyTypes": true,
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "allowUnreachableCode": true,
   },
   "include": [
     "index.ts",
