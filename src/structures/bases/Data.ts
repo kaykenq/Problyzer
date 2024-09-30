@@ -1,13 +1,7 @@
-type Data = Array<string | number> | Record<string | number, string | number>
+import Base from "./Base"
 
-export default class DataBase {
-    public data: Data;
-    constructor(data: Data) {
-        this.data = data
-    }
-
-    public get getInformation() {
-        const key = Object.keys(this.data)
-        return 1
+export default class DataBase extends Base {
+    constructor(data: Record<(string | number), (string | number)>) {
+        super(data)
     }
 }
