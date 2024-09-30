@@ -1,5 +1,5 @@
 export default class Base {
-    constructor(data: Record<string | number, string | number>) {
+    constructor(data: Record<(string | number), (string | number)>) {
         Object.defineProperty(this, '', {value: data})
 
     }
