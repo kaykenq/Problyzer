@@ -13,7 +13,11 @@
   "name": "problyzer",
   "version": "0.0.1-beta",
   "description": "Probability analyzer designed to make predictions.",
-  "main": "index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/**/*"
+  ],
   "scripts": {
     "test": "npm run build && node dist/index.js",
     "lint": "npx eslint --ext .js,.ts .",

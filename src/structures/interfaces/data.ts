@@ -1,3 +1,4 @@
 export interface DataOptions {
-    algorithm: number[]
+    algorithm: number[];
+    path?: string
 }

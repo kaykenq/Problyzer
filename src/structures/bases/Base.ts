@@ -1,6 +1,6 @@
 export default class Base {
-    constructor(data: Record<(string | number), (string | number)>) {
-        Object.defineProperty(this, '', {value: data})
+    constructor(n: string, data: Record<(string | number), (string | number)>) {
+        Object.defineProperty(this, n, { value: data })
 
     }
 
