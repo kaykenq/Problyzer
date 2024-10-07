@@ -1,7 +1,10 @@
+import Cache from "../../managers/Cache"
+
 export default class Base {
+  public cache: Cache;
     constructor(n: string, data: Record<(string | number), (string | number)>) {
         Object.defineProperty(this, n, { value: data })
-
+        this.cache = new Cache()
     }
 
     public toJSON(o: string): object {

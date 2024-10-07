@@ -1,16 +1,13 @@
 import Base from "./Base";
-import Cache from "../../managers/Cache"
 import { DataOptions } from "../../structures/interfaces/data";
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
 
 export default class DataBase extends Base {
     public options: DataOptions;
-    public cache: Cache;
     constructor(data: Record<(string | number), (string | number)>, options: DataOptions) {
         super('data', data)
         this.options = options
-        this.cache = new Cache()
     }
     
     private async applyAlgorithms(): Promise<string[]> {
