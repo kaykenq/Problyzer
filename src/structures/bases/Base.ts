@@ -2,7 +2,7 @@ import Cache from "../../managers/Cache"
 
 export default class Base {
   public cache: Cache;
-    constructor(n: string, data: Record<(string | number), (string | number)>) {
+    constructor(n: string, data?: Record<(string | number), (string | number)> | undefined) {
         Object.defineProperty(this, n, { value: data })
         this.cache = new Cache()
     }
