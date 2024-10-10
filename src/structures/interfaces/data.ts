@@ -1,8 +1,8 @@
 export interface DataOptions {
-    algorithm: number[];
-    path: string | "../algorithms"
+  algorithm: number[]
+  path: string | '../algorithms'
 }
 
 export interface AlgorithmsInterface {
-  execute: (...args: any[]) => Promise<any>
+  execute: (...args: unknown[]) => Promise<unknown>
 }
