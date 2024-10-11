@@ -17,4 +17,8 @@ export default class Base {
   public toString(o: object): string {
     return JSON.stringify(o)
   }
+
+  public toArray(o: object): Array<string | number | object> {
+    return Object.values(o)
+  }
 }
