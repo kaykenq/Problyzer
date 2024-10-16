@@ -17,16 +17,13 @@ export default class ProcessManager extends ProcessStructure {
     return (this.groups = result)
   }
 
-  public getGroup(): unknown {
-    if (!this.info.currentId) return
-    return this.groups[this.info.currentId]
+  public get groupData(): unknown {
+    return this.groups[this.info.id ?? 0]
   }
 
   public async runDifferentFunctions<T>(
     ...fns: ((...args: T[]) => unknown)[]
   ): Promise<void> {
-    for (let i = this.info.currentId ?? 0; i < fns.length; i++) {
-      await fns[i]!()
-    }
+    await fns[this.info.id ?? 0]!()
   }
 }

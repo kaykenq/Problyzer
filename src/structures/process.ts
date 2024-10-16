@@ -7,6 +7,7 @@ import { ProcessOptions, ProcessResponse } from './interfaces/process'
 export default class Process extends Base {
   public info: ProcessResponse = {
     cpusLength: 0,
+    workers: [],
   }
   constructor(public options: ProcessOptions) {
     super('process')
@@ -30,5 +31,13 @@ export default class Process extends Base {
       ? data.length
       : Object.values(data).length
     return n / this.info.cpusLength
+  }
+
+  public setInfo(worker: ProcessResponse) {
+    return (this.info = worker)
+  }
+
+  public appendWorkers(process: object) {
+    return this.info.workers?.push(process)
   }
 }
