@@ -1,8 +1,8 @@
 export interface ProcessResponse {
   type?: 'thread' | 'cluster' | undefined
   cpusLength: number | 0
-  workers?: object[]
-  id?: number
+  workers?: unknown[] | object | undefined
+  id?: number | undefined
   [key: string]: string | number | object | undefined
 }
 

@@ -37,7 +37,9 @@ export default class Process extends Base {
     return (this.info = worker)
   }
 
-  public appendWorkers(process: object) {
+  public appendWorkers(process: object): unknown {
+    if (!Array.isArray(this.info.workers)) return
+
     return this.info.workers?.push(process)
   }
 }
