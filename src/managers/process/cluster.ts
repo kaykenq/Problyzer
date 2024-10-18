@@ -24,7 +24,6 @@ export default class ClusterProcess extends ProcessManager {
       workers: Cluster.workers,
       worker: Cluster.worker,
       cpusLength: availableParallelism(),
-      
     })
   }
 }
