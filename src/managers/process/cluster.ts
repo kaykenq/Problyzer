@@ -1,6 +1,7 @@
 import { ProcessOptions } from '../../structures/interfaces/process'
 import ProcessManager from '../process'
 import Cluster from 'node:cluster'
+import { availableParallelism } from 'node:os'
 
 export default class ClusterProcess extends ProcessManager {
   constructor(options: ProcessOptions) {
@@ -22,7 +23,8 @@ export default class ClusterProcess extends ProcessManager {
       id: Cluster.worker?.id,
       workers: Cluster.workers,
       worker: Cluster.worker,
-      cpusLength: 0,
+      cpusLength: availableParallelism(),
+      
     })
   }
 }
