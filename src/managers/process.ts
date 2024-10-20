@@ -21,9 +21,9 @@ export default class ProcessManager extends ProcessStructure {
     return this.groups[this.info.id ?? 0]
   }
 
-  public async runDifferentFunctions<T>(
-    ...fns: ((...args: T[]) => unknown)[]
+  public async runDifferentFunctions(
+    ...fns: ((...args: unknown[]) => unknown)[]
   ): Promise<void> {
-    await fns[this.info.id ?? 0]!()
+    await fns[this.info.id ?? 0]!(this)
   }
 }

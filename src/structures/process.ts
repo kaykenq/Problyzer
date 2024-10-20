@@ -10,7 +10,7 @@ export default class Process extends Base {
     workers: [],
   }
   constructor(public options: ProcessOptions) {
-    super('process')
+    super()
     this.info.cpusLength = availableParallelism()
   }
 

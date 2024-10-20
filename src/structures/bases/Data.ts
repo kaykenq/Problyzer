@@ -4,18 +4,16 @@ import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
 export default class DataBase extends Base {
-  public options: DataOptions
   constructor(
-    data: Record<string | number, string | number>,
-    options: DataOptions,
+    public data: Record<string | number, string | number>,
+    public options: DataOptions,
   ) {
-    super('data', data)
-    this.options = options
+    super()
   }
 
-  private async applyAlgorithms(): Promise<string[]> {
+  private applyAlgorithms(): string[] {
     this.options.path = join(__dirname, this.options?.path || '../algorithms/')
-    const files = await readdirSync(this.options.path)
+    const files = readdirSync(this.options.path)
     return files
   }
 
@@ -26,7 +24,7 @@ export default class DataBase extends Base {
   }
 
   private async getAllAlgorithms(): Promise<void> {
-    const files = await this.applyAlgorithms()
+    const files = this.applyAlgorithms()
     return await this.cache.setAll(files, this.solveAlgorithmFile)
   }
 
