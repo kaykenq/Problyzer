@@ -1,4 +1,4 @@
-import BaseAlgorithm from '../utils/algorithms/Base'
+import BaseAlgorithm from '../structures/bases/Algorithm'
 
 export default class Math extends BaseAlgorithm {
   constructor() {

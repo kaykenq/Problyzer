@@ -1,5 +1,6 @@
 import DataBase from './bases/Data'
-import { DataOptions, AlgorithmsInterface } from '../structures/interfaces/data'
+import { DataOptions } from '../utils/interfaces/data'
+import { AlgorithmInterface } from '../utils/interfaces/algorithms'
 
 export default class Data extends DataBase {
   constructor(
@@ -15,7 +16,7 @@ export default class Data extends DataBase {
   }
 
   private async runAlgorithm(
-    C: new (...args: unknown[]) => AlgorithmsInterface,
+    C: new (...args: unknown[]) => AlgorithmInterface,
   ): Promise<unknown> {
     const Algorithm = new C(this)
     /* this.emit("debug", "[RUNNING_ALGORITHM] => Algorithm.name (Algorithm.id)") */

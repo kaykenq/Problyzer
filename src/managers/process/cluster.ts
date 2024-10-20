@@ -1,4 +1,4 @@
-import { ProcessOptions } from '../../structures/interfaces/process'
+import { ProcessOptions } from '../../utils/interfaces/process'
 import ProcessManager from '../process'
 import Cluster from 'node:cluster'
 import { availableParallelism } from 'node:os'

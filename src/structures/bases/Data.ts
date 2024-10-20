@@ -1,5 +1,5 @@
 import Base from './Base'
-import { DataOptions } from '../../structures/interfaces/data'
+import { DataOptions } from '../../utils/interfaces/data'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
 

@@ -6,3 +6,7 @@ export interface Algorithm {
   auto: boolean
   version?: string | undefined
 }
+
+export interface AlgorithmInterface {
+  execute: (...args: unknown[]) => Promise<unknown>
+}

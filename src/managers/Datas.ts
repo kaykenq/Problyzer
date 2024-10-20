@@ -1,5 +1,5 @@
 import Data from '../structures/Data'
-import { DataOptions } from '../structures/interfaces/data'
+import { DataOptions } from '../utils/interfaces/data'
 // isso aqui é para salvar arquivos, por exemplo resultados, além disso, isso aplicará alguns dos algoritimos
 export default class DataManager extends Data {
   constructor(

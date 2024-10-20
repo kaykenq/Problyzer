@@ -2,7 +2,7 @@ import Base from './bases/Base'
 import Cluster from 'node:cluster'
 import { availableParallelism } from 'node:os'
 import { isMainThread } from 'node:worker_threads'
-import { ProcessOptions, ProcessResponse } from './interfaces/process'
+import { ProcessOptions, ProcessResponse } from '../utils/interfaces/process'
 
 export default class Process extends Base {
   public info: ProcessResponse = {

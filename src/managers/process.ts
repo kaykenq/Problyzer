@@ -1,6 +1,5 @@
-import { ProcessOptions } from '../structures/interfaces/process'
+import { ProcessOptions } from '../utils/interfaces/process'
 import ProcessStructure from '../structures/process'
-// import { Data } from '../structures/interfaces/data'
 
 export default class ProcessManager extends ProcessStructure {
   private groups: (string | number | object)[] = []
